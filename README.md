@@ -5,7 +5,7 @@ OP_RETURNを含めたトランザクションを作ったり、トランザク�
 GETで指定したtxidのrawTransactionからOP_RETURN部分を取得するスクリプト。
 
 ※ $rpcpasswordを指定してください。
-## sendtx.php
+### sendtx.php
 write.phpからPOSTされた情報をもとにトランザクションを作るスクリプト。
 
 write.phpでmonacoind側にmonaを送信<br>
@@ -14,7 +14,7 @@ write.phpでmonacoind側にmonaを送信<br>
 ※ $rpcpasswordを指定してください。
 
 ※ $changeAddressに余りmonaの送信先のアドレスを指定してください。
-## write.php
+### write.php
 受け取り用アドレスを生成し、生成するトランザクションの情報をsendtx.phpにPOSTするスクリプト。
 
 ※ $rpcpasswordを指定してください。
