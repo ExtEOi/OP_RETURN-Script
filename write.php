@@ -1,25 +1,6 @@
 <?php
 ini_set( 'display_errors', 0 ); 
 
-//シークレットキー
-$secret_key = "";
-//認証コード
-if(isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response']) && is_string($_POST['g-recaptcha-response'])){
-	$code = $_POST['g-recaptcha-response'];
-}else{
-   	$code = "";
-}
-//エンドポイント
-$endpoint = "https://www.google.com/recaptcha/api/siteverify?secret={$secret_key}&response={$code}";
-//判定結果の取得
-$json = @file_get_contents($endpoint);
-//JSONをオブジェクト型に変更
-$obj = json_decode($json);
-//判定(不正な場合は終了)
-if($obj->success != true){
-	echo 'reCAPTCHA error';exit();
-}
-
 require_once(__DIR__ . '/jsonRPCClient.php');
 $host = 'localhost';		/* monacoind 又は monacoin-qt を実行中のホストのアドレス */
 $rpcuser = 'monacoinrpc';	/* monacoin.conf で指定した rpcユーザー名 */
