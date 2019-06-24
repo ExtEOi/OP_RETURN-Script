@@ -8,6 +8,8 @@ $rpcport = '19402';			/* monacoin.conf で指定した rpcポート */
 $coindaddr = "http://$rpcuser:$rpcpassword@$host:$rpcport/";
 $coind = new jsonRPCClient($coindaddr);
 
+$changeAddress = 'MSyobon4F75Mp4jCTLih1LzLUbdwU5Hzfy';
+
 function error($errorinput){return $errorinput.'<br><a href="./write.html">戻る</a>';}
 
 function EncDec($input, $length = 0){
@@ -68,7 +70,6 @@ if (!($totalOutputWatanabe >= 0)) {
 	$error = error('残高エラー');
 }
 
-$changeAddress = 'MSyobon4F75Mp4jCTLih1LzLUbdwU5Hzfy';
 $outputMona = filter_input( INPUT_POST, 'output' );
 $outputWatanabe = $outputMona * 100000000;
 $outputAddress = filter_input( INPUT_POST, 'address' );
