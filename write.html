@@ -1,0 +1,13 @@
+OP_RETURNを含めたトランザクション送信するやつ<br>
+recaptcha認証をお願いします。<br>
+<form action="write.php" method="post">
+  <div class="g-recaptcha" data-sitekey=""></div>
+  <input type="submit" id="submit">
+</form><br>
+OP_RETURN取得はこちら<br>
+<form action="getopreturn.php" method="get">
+  tx
+  <input type="text" id="tx" name="tx" maxlength="64"><br>
+  <input type="submit" id="submit">
+</form>
+<script src='https://www.google.com/recaptcha/api.js'></script>
