@@ -7,8 +7,9 @@ GETで指定したtxidのrawTransactionからOP_RETURN部分を取得するス�
 ※ $rpcpasswordを指定してください。
 ## sendtx.php
 write.phpからPOSTされた情報をもとにトランザクションを作るスクリプト。
-write.phpでmonacoindにmonaを送信
-→ sendtx.phpでmonacoindから送信元アドレスにOP_RETURNを含めたトランザクションを送信
+
+write.phpでmonacoind側にmonaを送信<br>
+→ sendtx.phpでmonacoindから送信元アドレスにOP_RETURNを含めたトランザクションを送信、という流れ
 
 ※ $rpcpasswordを指定してください。
 
